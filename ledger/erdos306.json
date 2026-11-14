@@ -64,7 +64,7 @@
     "stop": [],
     "new": [
      {
-      "spoken": "at the pinned commit the formal-conjectures file already marks the problem solved, citing Li's paper and linking a Lean solution file by a third party, linrock; that link has not been checked here",
+      "spoken": "at the pinned commit the formal-conjectures file already carries the tag `research solved`, cites Li's paper, and links a Lean proof by Linmiao Xu (linrock/math-proofs). Xu's own README says that proof is a port of the claimant's development to a newer Lean, that no novelty is claimed, and that a local build and axiom audit do not constitute human specialist review. So the tag records that a machine-checked proof of the formal statement exists, which E2 certifies independently here; it is not a reading of the statement against the problem as posed, and the problem page does not mark the claim accepted",
       "finding_ids": []
      },
      {
@@ -100,6 +100,10 @@
     {
      "kind": "formal statement (third party)",
      "ref": "github.com/google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/306.lean at e028240a61822d970c933f4656f51da025cf200b"
+    },
+    {
+     "kind": "formalisation (third party, port)",
+     "ref": "github.com/linrock/math-proofs erdos-306/ at e1a5e2a3317007f0e31b98bf2e80383187b31238, Linmiao Xu: a port of the claimant's Lean development to Lean 4.35.0-rc2, linked as the formal proof from formal-conjectures' 306.lean"
     }
    ]
   }

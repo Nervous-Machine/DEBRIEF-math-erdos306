@@ -25,7 +25,7 @@ Artifacts, pinned:
 - an arXiv preprint: arXiv:2606.15159v2 "Every natural number is a sum of distinct semiprime unit fractions (earlier partial result by the same author)" (published 2026-06-13, last revised 2026-06-17)
 - a Zenodo deposit: https://doi.org/10.5281/zenodo.20767390 (Yuren Tang's Lean development, conditional on two stated axioms; cited by the claimant)
 
-Status on the problem page as of 2026-11-14: listed as one proof claim; not marked accepted by the site.
+Status on the problem page as of 2026-11-14: listed as one proof claim; not marked accepted by the site. Google DeepMind's formal-conjectures file for the problem, at the commit pinned here, is tagged `research solved`, cites Li's paper and links a Lean proof by Linmiao Xu that is, by its own README, a port of Li's development. That tag records that a machine-checked proof of the formal statement exists; it is not a human reading of the statement against the problem as posed.
 
 ## What is owed
 

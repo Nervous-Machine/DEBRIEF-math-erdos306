@@ -44,4 +44,5 @@ record:
   - {dated: "2026-09-26", text: "Shisheng Li posted an arXiv paper claiming an elementary full proof."}
   - {dated: "2026-09-29", text: "Shisheng Li published the Lean development on GitHub and listed the proof claim on the problem page, reporting no sorry, standard axioms only, and a proof of the third-party formal statement."}
   - {dated: "2026-11-14", text: "The problem page lists one proof claim, not marked accepted by the site; the repository has no licence file."}
+  - {dated: "2026-11-14", text: "The formal-conjectures file for the problem is tagged research solved, cites Li's paper, and links a Lean proof by Linmiao Xu (linrock/math-proofs) that its README describes as a port of Li's development to a newer Lean; the problem page is unchanged."}
 site_status: "listed as one proof claim; not marked accepted by the site"
