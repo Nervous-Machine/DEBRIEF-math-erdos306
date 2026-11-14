@@ -1,0 +1,48 @@
+# Pre-registration, cycle 2: a definitional trace (reading guide) of the formal statement of Erdős Problem #306, for
+# human semantic review. Written 2026-11-14 after cycle 1 (the build rerun and the machine comparison, which showed the
+# claimant's development proves the formal-conjectures statement word for word) and BEFORE reading the Mathlib
+# definitions behind that statement or writing any rendering. Changes after this point go in an amendment at the end.
+mission: DEBRIEF-math-erdos306
+cycle: 2
+dated: "2026-11-14"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+question: >
+  Can the open semantic gap (EG2: does the formal statement say what Erdős and Graham asked?) be made cheaper for a
+  human reviewer, by laying out the problem as posed, the third-party formal statement, every definition it depends on
+  down to Mathlib, and a plain-language rendering of each, with the specific points a mathematician has to confirm?
+what_this_cycle_is:
+  - "An aid for review: trace/DEFINITIONAL-TRACE.md plus a machine transcript (cycles/trace-2/) of the statement and
+     definitions as the built development prints them, and of small worked examples checked by Lean (decide / #eval)."
+  - "The renderings are the operating agent's reading of Lean and Mathlib source. They are a reading, not a check."
+what_this_cycle_is_not:
+  - "Not an independent human semantic review. EG2 stays open after this cycle whatever the trace says; the trace moves
+     no standing. The reader of the problem statement against the formal one is still a mathematician."
+  - "It does not read or judge the paper's argument (EG3)."
+rules:
+  R1: "Every Lean statement is quoted verbatim from the pinned formal-conjectures file (blob f7940968) or from the Mathlib
+       revision pinned by the claimant's lake-manifest (921b8d39), with file and line, as found inside the built development."
+  R2: "Each rendering is marked as the agent's reading. Where the agent is unsure what a definition means, it says so."
+  R3: "Any place where the formal statement and the problem as posed differ in a way the agent can see (a boundary case,
+       a convention, an index, the handling of the trivial case) is recorded as a discrepancy whether or not it looks
+       harmless, and as an anomaly in the ledger if it could change the meaning."
+  R4: "Worked examples are checked by Lean's kernel, not asserted: the transcript shows the commands and their output."
+observed_before_this_prereg:
+  - "The problem page states: 'Let a/b in Q>0 with b squarefree. Are there integers 1 < n_1 < ... < n_k, each the product
+     of two distinct primes, such that a/b = 1/n_1 + ... + 1/n_k?' citing [ErGr80]. The formal-conjectures docstring
+     repeats this sentence."
+  - "The formal statement uses q.den, Squarefree, a function n : Fin (k+1) -> N with n 0 = 1 and StrictMono n, the
+     conditions omega (n i) = 2 and Omega (n i) = 2 for i in Icc 1 (Fin.last k), and a sum over the same range."
+predictions:
+  P1: "The formal statement renders to the page's sentence with no constant or quantifier mismatch: n 0 = 1 together
+       with StrictMono gives 1 < n_1 < ... < n_k; omega = Omega = 2 gives 'product of two distinct primes'; q.den is the
+       reduced denominator; the sum over Icc 1 (Fin.last k) is 1/n_1 + ... + 1/n_k."
+  P2: "At least one boundary convention will need a sentence (candidates: what k = 0 means, since Fin 1 has one
+       element and the numeral 1 in Fin 1 is 0; division by zero in Q; Squarefree 1); none will change the meaning,
+       because the case k = 0 is excluded by omega (1) = 0 and no denominator can be 0 under omega = 2."
+  P3: "The claimant's own theorem (Finset form) is at least as strong as the formal-conjectures form, as cycle 1's
+       exact proof already shows; the trace will note the converse is not needed for the problem."
+standing_consequences:
+  any_outcome: "EG2 remains open. Its ask changes from 'read the formal statement' to 'read the trace against the
+                formal statement and the problem page, and sign or refuse each checklist item'."
+  discrepancy_found: "An anomaly is opened naming it; if it could change the meaning, finding E2's note is rewritten
+                      to say so the same day."
