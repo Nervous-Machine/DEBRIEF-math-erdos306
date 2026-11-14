@@ -1,0 +1,15 @@
+# R4 and R5: lake env lean on a scratch file outside the repository; 2026-11-14T22:22:12Z
+'fc_erdos_306' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos306.erdos_306' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos306.erdos_306_formal_conjectures' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos306.erdos_306 : ∀ (q : ℚ),
+  0 < q → Squarefree q.den → ∃ F, (∀ n ∈ F, ∃ p r, Nat.Prime p ∧ Nat.Prime r ∧ p ≠ r ∧ n = p * r) ∧ ∑ n ∈ F, 1 / ↑n = q
+Erdos306.erdos_306_formal_conjectures : ∀ (q : ℚ),
+  0 < q →
+    Squarefree q.den →
+      ∃ k n,
+        n 0 = 1 ∧
+          StrictMono n ∧
+            (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧
+              q = ∑ i ∈ Finset.Icc 1 (Fin.last k), 1 / ↑(n i)
+exit=0

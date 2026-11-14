@@ -1,30 +1,33 @@
 # The claimed solution of Erdős Problem #306 (sums of unit fractions with semiprime denominators)
 
-Erdős and Graham asked whether every positive rational with squarefree denominator is a sum of distinct unit fractions whose denominators are products of two distinct primes. In September 2026 Shisheng Li listed a claimed full proof with an arXiv paper and a Lean development, building on a June 2026 Lean development by Yuren Tang that proved the result conditional on two stated axioms. A third-party formalisation of the problem statement exists, so part of the semantic check can be done by machine. Nobody independent has reported building the Lean development or reading the paper.
+Erdős and Graham asked whether every positive rational with squarefree denominator is a sum of distinct unit fractions whose denominators are products of two distinct primes. In September 2026 Shisheng Li listed a claimed full proof with an arXiv paper and a Lean development, building on a June 2026 Lean development by Yuren Tang that proved the result conditional on two stated axioms. A third-party formalisation of the problem statement exists, so part of the semantic check can be done by machine. On 2026-11-14 Nervous Machine built the Lean development at its pinned commit on an independent machine, with the standard axioms only, and showed by machine that it proves the third-party statement word for word. Nobody independent has read that statement against the problem as posed, or the paper.
 
 _Rendered from the briefing record. Items marked internal in the ledger (how the framework works, the state of the record) stay in `ledger.json` and are not shown here._
 
-Record quality: full ledger. Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.
+Record quality: full ledger. Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, the same day: the Lean build rerun by Nervous Machine in a virtual machine under a pre-registered rule, and the claimant's statement compared by machine with the third party's.
 
-**Standing.** Certified 0. Accepted 0. Refuted 0. Open gaps 3. An open gap is an input or question nobody has settled; it is not a finding and has no standing.
+**Standing.** Certified 2. Accepted 0. Refuted 0. Open gaps 2. An open gap is an input or question nobody has settled; it is not a finding and has no standing.
 
 ## Findings
 
 | id | kind | standing | basis | cycles |
 |---|---|---|---|---|
+| E1 | learned | **certified** | a kernel-checked build rerun by a party independent of the author, under a rule written first | 1 |
+| E2 | learned | **certified** | a kernel-checked identity between the claimant's statement and a third party's statement of the problem, under a rule written first | 1 |
 
 ## Cycles, in order
 
 | cycle | dated | by | kind | written first | verdict |
 |---|---|---|---|---|---|
 | 0 | 2026-06-13 to 2026-11-14 |  | replay | no | admitted |
+| 1 | 2026-11-14 | Nervous Machine (Heidi Bennett; Claude Code as the operating agent) | rerun | yes | confirmed |
 
 ## Gaps, in the order that would settle things fastest
 
 | priority | gap | status | closes with | who could act | signal expected | resolution by |
 |---|---|---|---|---|---|---|
-| 1 | The Lean development has not been built or kernel-checked by anyone outside the claimant | proposed | a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms | anyone with a machine and a few hours | a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem | none registered |
-| 2 | Do the formal statements say what the problem asks? | proposed | a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference; two independent mathematicians read the formal statement against the problem as posed and sign, or refuse | anyone who can read Lean; the two statements are public; a mathematician in the problem's area, about an hour with a reading guide | a trace cycle and two signed read cycles, or a refusal naming the difference | none registered |
+| 1 | The Lean development has not been built or kernel-checked by anyone outside the claimant | resolved learned | a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms | anyone with a machine and a few hours | a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem | none registered |
+| 2 | Do the formal statements say what the problem asks? | in cycle | a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference; two independent mathematicians read the formal statement against the problem as posed and sign, or refuse | anyone who can read Lean; the two statements are public; a mathematician in the problem's area, about an hour with a reading guide | a trace cycle and two signed read cycles, or a refusal naming the difference | none registered |
 | 3 | No independent mathematician has reported reading the proof, and there is no referee report | proposed | a read cycle by a mathematician in the area who is not an author, signing or refusing each main step; a referee report or journal acceptance, recorded by date | a mathematician in the problem's area; a journal; the record notes the date when it happens | a signed or refused read cycle; a dated referee report | none registered |
 
 _Generated by DEBRIEF tools/render.py from ledger.json; protocol 0.1.0._

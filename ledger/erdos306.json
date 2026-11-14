@@ -23,9 +23,9 @@
    "began": "2026-11-14",
    "status": "active",
    "record_quality": "full_ledger",
-   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_note": "Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, the same day: the Lean build rerun by Nervous Machine in a virtual machine under a pre-registered rule, and the claimant's statement compared by machine with the third party's.",
    "record_limits": [
-    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+    "The Lean build has been rerun once, by Nervous Machine, and the claimant's statement matched by machine to the formal-conjectures statement. Nobody independent of the claimant has read that formal statement against the problem as posed, or the paper."
    ],
    "scope_limits": [
     "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
@@ -35,24 +35,46 @@
     "spoken": "This record covers the claimed solution of Erdős problem #306: what has been claimed, what it rests on, and what would have to be checked by whom."
    },
    "short_version": {
-    "spoken": "Erdős and Graham asked whether every positive rational with squarefree denominator is a sum of distinct unit fractions whose denominators are products of two distinct primes. In September 2026 Shisheng Li listed a claimed full proof with an arXiv paper and a Lean development, building on a June 2026 Lean development by Yuren Tang that proved the result conditional on two stated axioms. A third-party formalisation of the problem statement exists, so part of the semantic check can be done by machine. Nobody independent has reported building the Lean development or reading the paper."
+    "spoken": "Erdős and Graham asked whether every positive rational with squarefree denominator is a sum of distinct unit fractions whose denominators are products of two distinct primes. In September 2026 Shisheng Li listed a claimed full proof with an arXiv paper and a Lean development, building on a June 2026 Lean development by Yuren Tang that proved the result conditional on two stated axioms. A third-party formalisation of the problem statement exists, so part of the semantic check can be done by machine. On 2026-11-14 Nervous Machine built the Lean development at its pinned commit on an independent machine, with the standard axioms only, and showed by machine that it proves the third-party statement word for word. Nobody independent has read that statement against the problem as posed, or the paper."
    },
    "what_happened": {
-    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+    "spoken": "The claim was pinned from the public record. Nervous Machine then wrote down five checks and their predicted outcomes, fetched the Lean development at the pinned commit inside a virtual machine, built it, scanned it, printed the main theorem's axioms with its own file, and closed the third party's statement of the problem with the claimant's theorem. All five held. What remains is human: does the formal statement say what Erdős and Graham asked, and does the paper's argument hold as written."
    },
    "implications": {
-    "rely_on": [],
+    "rely_on": [
+     {
+      "spoken": "the Lean development builds and its main theorem rests on the standard axioms only",
+      "finding_ids": [
+       "E1"
+      ]
+     },
+     {
+      "spoken": "the claimant proved exactly the formal-conjectures statement of the problem, so the semantic question now concerns that third-party statement, not the claimant's wording",
+      "finding_ids": [
+       "E2"
+      ]
+     }
+    ],
     "do_not_rely_on": [
      {
-      "spoken": "the claimed solution as settled; nothing in it has standing yet",
+      "spoken": "the claimed solution as settled: whether the formal statement is the problem as posed, and whether the paper's argument is the one formalised, are both unread",
       "finding_ids": []
      }
     ],
     "stop": [],
-    "new": []
+    "new": [
+     {
+      "spoken": "at the pinned commit the formal-conjectures file already marks the problem solved, citing Li's paper and linking a Lean solution file by a third party, linrock; that link has not been checked here",
+      "finding_ids": []
+     },
+     {
+      "spoken": "the claimant's own README reports that the Lean development follows the paper lemma by lemma and that the formalisation replaced the paper's cited Ramanujan inequality with a proved bound; a reader of the paper should start there",
+      "finding_ids": []
+     }
+    ]
    },
    "certainty_statement": {
-    "spoken": "Nothing is certified or accepted. Every item is open."
+    "spoken": "Two items are certified by independent rerun and machine comparison. The human read of the formal statement and of the paper are open."
    },
    "sources": [
     {
@@ -117,9 +139,184 @@
     "EG2",
     "EG3"
    ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos306-2026-11",
+   "pod": "DEBRIEF-math-erdos306",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-14T22:23:43Z",
+   "provenance": {
+    "source": "contributed cycle file rerun-1.yaml"
+   },
+   "audience": "briefing",
+   "kind": "rerun",
+   "cycle": 1,
+   "dated": "2026-11-14",
+   "by": "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)",
+   "not_an_author_of_the_claim": true,
+   "preregistered": {
+    "commit": "prereg_rerun.yaml",
+    "results": [
+     "cycles/rerun-1/manifest.json",
+     "cycles/rerun-1/build.log",
+     "cycles/rerun-1/time.txt",
+     "cycles/rerun-1/scan.txt",
+     "cycles/rerun-1/compare.txt"
+    ],
+    "question": "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry reaching the main theorem, which axioms does the main theorem use, and does it prove the third-party formal statement of the problem?",
+    "rule": "All checks pass as predicted; any miss is recorded under misses. The build runs only inside an isolated virtual machine. The repository has no licence file, so nothing from it is copied into this record beyond short quotations of statements.",
+    "predictions": [
+     "R1: commit present; HEAD matches; tree clean",
+     "R2: lake build exits 0 with no errors; wall time under thirty minutes on 20 cores; peak memory under 16 GB",
+     "R3: no sorry, admit, native_decide, axiom declaration, implemented_by or extern in any file of the default build target's import closure",
+     "R4: the main theorem depends on propext, Classical.choice, Quot.sound only",
+     "R5: the verbatim formal-conjectures statement is closed by `exact` with the claimant's theorem and depends on the three standard axioms only"
+    ],
+    "before_data": true
+   },
+   "environment": {
+    "hardware": "aarch64, 20 cores, 98 GB memory; Lima vz virtual machine on an Apple-silicon host, nothing from the repository executed on the host",
+    "toolchain": "leanprover/lean4:v4.29.0-rc6 (Lean 4.29.0-rc6, Lake 5.0.0); Mathlib 921b8d39f71a5c813b526f38e4033417d40b4c3d from the community olean cache; no other dependencies",
+    "wall_time": "0:00:46 for lake build after an 83 s Mathlib cache download"
+   },
+   "outcome": {
+    "verdict": "confirmed",
+    "numbers": {
+     "R1_head": "1314c9a8bcedaaf986f61fb6cd7129a834116abb",
+     "R1_tree_clean": true,
+     "R2_exit_status": 0,
+     "R2_jobs": 8233,
+     "R2_modules_compiled_here": 14,
+     "R2_wall": "0:45.68",
+     "R2_max_rss_mb": 6860.0,
+     "R2_errors": 0,
+     "R3_sorry_hits": 0,
+     "R3_sorry_note": "the word appears once, inside a doc comment quoting the third-party file's `answer(sorry)`; no sorry term or tactic anywhere",
+     "R3_admit_hits": 0,
+     "R3_native_decide_hits": 0,
+     "R3_axiom_declarations": 0,
+     "R4_axioms_erdos_306": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R5_axioms_erdos_306_formal_conjectures": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R5_axioms_verbatim_third_party_statement_closed_by_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R5_statement_text_identical_to_third_party": true,
+     "third_party_statement": "google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/306.lean at e028240a (blob f7940968, sha256 7a5d90ac5eef16085ff86291dd44002583ec7ddfabf1631cc0e76d4bf3479a89)",
+     "main_theorem": "Erdos306.erdos_306 : ∀ (q : ℚ), 0 < q → Squarefree q.den → ∃ F, (∀ n ∈ F, ∃ p r, Nat.Prime p ∧ Nat.Prime r ∧ p ≠ r ∧ n = p * r) ∧ ∑ n ∈ F, 1 / ↑n = q",
+     "third_party_form": "∀ (q : ℚ), 0 < q → Squarefree q.den → ∃ k : ℕ, ∃ (n : Fin (k + 1) → ℕ), n 0 = 1 ∧ StrictMono n ∧ (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧ q = ∑ i ∈ Finset.Icc 1 (Fin.last k), (1 : ℚ) / (n i)",
+     "third_party_file_status_at_pin": "marked `research solved`, citing Li's paper, with a formal_proof link to a Lean file in linrock/math-proofs (a third party), and citing Yuren Tang's conditional development"
+    },
+    "misses": []
+   },
+   "spoken": "Nervous Machine fetched Shisheng Li's Lean development for problem 306 at the pinned commit, inside a virtual machine, and built it with the toolchain and Mathlib version it pins. The build finished in under a minute with no errors, and our own axiom print shows the main theorem resting on the three standard axioms only. We then copied the problem's statement from Google DeepMind's formal-conjectures repository, word for word, into our own file and closed it with the claimant's theorem in one step. So the machine part of the semantic question is settled: the claimant proved exactly the third party's statement. Whether that statement is the problem Erdős and Graham posed is still a question for a mathematician.",
+   "finding_ids": [
+    "E1",
+    "E2"
+   ],
+   "gap_ids": [
+    "EG1",
+    "EG2"
+   ]
   }
  ],
- "findings": [],
+ "findings": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos306-2026-11",
+   "pod": "DEBRIEF-math-erdos306",
+   "audience": "briefing",
+   "created_by": "DEBRIEF-math-erdos306 maintainer, after cycle 1",
+   "created_at": "2026-11-14T22:25:00Z",
+   "provenance": {
+    "source": "cycle 1 rerun logs in cycles/rerun-1/"
+   },
+   "finding_id": "E1",
+   "kind": "learned",
+   "spoken": "The claimant's Lean development builds at the pinned commit on a machine independent of the author, with the toolchain and Mathlib version it pins, and the main theorem Erdos306.erdos_306 depends on the three standard axioms only: propext, Classical.choice and Quot.sound. No sorry reaches it.",
+   "evidence": {
+    "numbers": {
+     "commit": "1314c9a8bcedaaf986f61fb6cd7129a834116abb",
+     "exit_status": 0,
+     "wall": "0:45.68",
+     "max_rss_mb": 6860.0,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "cycles": [
+     1
+    ],
+    "confirmed_by": [
+     "rerun by Nervous Machine in an isolated VM; axiom print from our own scratch file"
+    ]
+   },
+   "standing": {
+    "status": "certified",
+    "basis": "a kernel-checked build rerun by a party independent of the author, under a rule written first",
+    "note": "one machine, one party; a second rerun by someone outside Nervous Machine would strengthen it. This certifies that the formal statement follows from Lean's axioms; it says nothing about whether the formal statement is the problem posed (gap EG2)."
+   },
+   "certainty": {
+    "earned": true,
+    "note": "independent rerun (audit regime)"
+   },
+   "edge_refs": []
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos306-2026-11",
+   "pod": "DEBRIEF-math-erdos306",
+   "audience": "briefing",
+   "created_by": "DEBRIEF-math-erdos306 maintainer, after cycle 1",
+   "created_at": "2026-11-14T22:25:00Z",
+   "provenance": {
+    "source": "cycle 1 rerun logs in cycles/rerun-1/"
+   },
+   "finding_id": "E2",
+   "kind": "learned",
+   "spoken": "The claimant's development proves, word for word, the statement of problem 306 in Google DeepMind's formal-conjectures repository at the pinned commit: the third-party statement, copied verbatim into Nervous Machine's own file, is closed by the claimant's theorem in one step and depends on the three standard axioms only.",
+   "evidence": {
+    "numbers": {
+     "third_party": "formal-conjectures FormalConjectures/ErdosProblems/306.lean at e028240a, blob f7940968",
+     "statement_text_identical": true,
+     "closed_by": "exact Erdos306.erdos_306_formal_conjectures",
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "cycles": [
+     1
+    ],
+    "confirmed_by": [
+     "machine comparison by Nervous Machine in an isolated VM, under a rule written first"
+    ]
+   },
+   "standing": {
+    "status": "certified",
+    "basis": "a kernel-checked identity between the claimant's statement and a third party's statement of the problem, under a rule written first",
+    "note": "this moves the semantic question from the claimant's wording to the third party's wording; whether formal-conjectures' statement is the problem Erdős and Graham posed is still for a human reader (gap EG2)"
+   },
+   "certainty": {
+    "earned": true,
+    "note": "deterministic, reproducible check (audit regime)"
+   },
+   "edge_refs": []
+  }
+ ],
  "gaps": [
   {
    "schema_version": "nm-debrief-v1",
@@ -133,10 +330,17 @@
    "audience": "briefing",
    "gap_id": "EG1",
    "title": "The Lean development has not been built or kernel-checked by anyone outside the claimant",
-   "status": "proposed",
+   "status": "resolved_learned",
    "opened_cycle": 0,
    "priority": 1,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "the Lean development builds independently with standard axioms only",
+     "before_data": true,
+     "result": "build exit 0 in 0:46 on 20 cores, 6.9 GB peak; axioms propext, Classical.choice, Quot.sound; status proposed -> resolved_learned (one independent party; a second rerun would strengthen)"
+    }
+   ],
    "closes_with": [
     {
      "what": "a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms",
@@ -164,10 +368,17 @@
    "audience": "briefing",
    "gap_id": "EG2",
    "title": "Do the formal statements say what the problem asks?",
-   "status": "proposed",
+   "status": "in_cycle",
    "opened_cycle": 0,
    "priority": 2,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "the claimant's theorem and the third-party formal statement are the same proposition",
+     "before_data": true,
+     "result": "identical text; the verbatim third-party statement is closed by exact with the claimant's theorem (E2). The machine half is done; the human half, reading the formal-conjectures statement against the problem as posed, is open; status proposed -> in_cycle"
+    }
+   ],
    "closes_with": [
     {
      "what": "a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference",

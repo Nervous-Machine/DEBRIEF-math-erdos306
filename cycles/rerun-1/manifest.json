@@ -1,0 +1,101 @@
+{
+ "repo": "github.com/daizisheng/erdos-306",
+ "commit": "1314c9a8bcedaaf986f61fb6cd7129a834116abb",
+ "tree_clean": true,
+ "package_dir": "lean/",
+ "lean_toolchain": "leanprover/lean4:v4.29.0-rc6",
+ "lean_version": "Lean (version 4.29.0-rc6, aarch64-unknown-linux-gnu, commit 00659f8e6071d7e46131ed643bf8003b99b044e9, Release)",
+ "lake_version": "Lake version 5.0.0-src+00659f8 (Lean version 4.29.0-rc6)",
+ "packages": [
+  {
+   "name": "mathlib",
+   "rev": "921b8d39f71a5c813b526f38e4033417d40b4c3d",
+   "url": "https://github.com/leanprover-community/mathlib4",
+   "inherited": false
+  },
+  {
+   "name": "plausible",
+   "rev": "e84e3e16aea6b72cc5d311ca1bb25caad417e162",
+   "url": "https://github.com/leanprover-community/plausible",
+   "inherited": true
+  },
+  {
+   "name": "LeanSearchClient",
+   "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "url": "https://github.com/leanprover-community/LeanSearchClient",
+   "inherited": true
+  },
+  {
+   "name": "importGraph",
+   "rev": "f207d9fcf0cef00ba79962a33ef156061914d9c7",
+   "url": "https://github.com/leanprover-community/import-graph",
+   "inherited": true
+  },
+  {
+   "name": "proofwidgets",
+   "rev": "2e58165a9dcdca9837b666528f974299ee1a51cc",
+   "url": "https://github.com/leanprover-community/ProofWidgets4",
+   "inherited": true
+  },
+  {
+   "name": "aesop",
+   "rev": "c3361708f266893de5d1769192b60d4b1831f2bb",
+   "url": "https://github.com/leanprover-community/aesop",
+   "inherited": true
+  },
+  {
+   "name": "Qq",
+   "rev": "221e8088e3a066b8676dc471ff10638cf1c10835",
+   "url": "https://github.com/leanprover-community/quote4",
+   "inherited": true
+  },
+  {
+   "name": "batteries",
+   "rev": "77a5160a74772214ef37caba2847cfe9ab600285",
+   "url": "https://github.com/leanprover-community/batteries",
+   "inherited": true
+  },
+  {
+   "name": "Cli",
+   "rev": "3de531c1135f5e3a01f3ac04830996fda476b28e",
+   "url": "https://github.com/leanprover/lean4-cli",
+   "inherited": true
+  }
+ ],
+ "lean_files": 14,
+ "sha256": {
+  "Erdos306/Asymptotics.lean": "1186c1148e8b6f1b168961cc8d41e7e027fec57bf192c9338ccb3e431e9db722",
+  "Erdos306/Basic.lean": "bd48bd158f16f5ab06f899a220c33770167d4d7393b2d90e909037a5c64621bc",
+  "Erdos306/Columns.lean": "514abdcdf176d2c96d9e5280e04cb49682db24e9b4c032c78e1e5dd5f5f8e6fa",
+  "Erdos306/Construction.lean": "4b8b5455c49664e9e288a8c8eb0168a3f618e922701458d3c3e6b481beaa552a",
+  "Erdos306/Core.lean": "c0ece91347d2269f843c5438d678974d6f234266eddcd8968c0f8f8835d9ef38",
+  "Erdos306/Counting.lean": "178381396d2c0b9443ab5951b9cf4d00be82eb7bdea089ffbae8f59ff73b5664",
+  "Erdos306/FormalConjectures.lean": "251f37037b4ca5cc3e73847c6083b804b474a9ed8a98cf65cd725d5988eb79e9",
+  "Erdos306/Main.lean": "d6e0fbb27a1ab8aa1a61f0a82db588317c5109ed6661dbfe41e2dabbd1111b8a",
+  "Erdos306/Major.lean": "196bcbdc28e8e86ac5cefbcb0a4b994da5c92fa1456fc60e911edb7d2e2d87ae",
+  "Erdos306/Minor.lean": "089dfb31a05451bee4cd43e55406cb63a5352991559da63ef6cb252c940a5de6",
+  "Erdos306/Primes.lean": "a2b6b97e1eba782bb67caadb95f4e941c0a380349dac4ea651899b41cc61934e",
+  "Erdos306/Reduction.lean": "919aa677ed477ebc2199c6492873051f4659bd36aaaaebcaa37eed13811636ec",
+  "Erdos306/Table.lean": "f9d10c6e05b6d331fd5b595cd80e2031309ab379e7f4580dd8a1823614aa9cb0",
+  "Erdos306.lean": "cc0faa1a6f626aabf21fc08ce06d3428dd6f0661d6c62ff2c40169d173c9caf5",
+  "lakefile.toml": "de77b33dd8466e10228b146802b8db427c3459878bca4dd8a643eaf9038f8f16",
+  "lake-manifest.json": "17d81c85b6ef6d60e21f4236dabdd68217c61cfc6ec9ff6b390dd88362b04771",
+  "lean-toolchain": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361",
+  "README.md": "e6df4764c0062908775adadc80c8c5f5fcbfd48f6333d07050805e82fbd6f8c0",
+  "../README.md": "c8b66c534338c9d6a2f929a0890de38a1b5b34728ce8c94bce1d21ad8e5bb274"
+ },
+ "third_party_statement": {
+  "repo": "github.com/google-deepmind/formal-conjectures",
+  "path": "FormalConjectures/ErdosProblems/306.lean",
+  "commit": "e028240a61822d970c933f4656f51da025cf200b",
+  "blob": "f7940968a96f001791760ef405089a19056c013b",
+  "sha256": "7a5d90ac5eef16085ff86291dd44002583ec7ddfabf1631cc0e76d4bf3479a89"
+ },
+ "machine": {
+  "arch": "aarch64",
+  "os": "Linux-7.0.0-42-generic-aarch64-with-glibc2.43",
+  "cores": 20,
+  "mem_gb": 98,
+  "vm": "Lima vz VM primegaps on an Apple-silicon host"
+ }
+}

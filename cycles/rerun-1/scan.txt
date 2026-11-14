@@ -1,0 +1,26 @@
+# R3 scan, every .lean under lean/ (.lake excluded); 2026-11-14T22:20:07Z
+## sorry
+./Erdos306/FormalConjectures.lean:4:from `Erdos306.erdos_306`.  There the statement reads `answer(sorry) ↔ P`; the theorem below
+## admit
+(none)
+## native_decide
+(none)
+## axiom declarations
+(none)
+## implemented_by / extern
+(none)
+## import closure of the default target (Erdos306.lean)
+import Erdos306.Asymptotics
+import Erdos306.Basic
+import Erdos306.Columns
+import Erdos306.Construction
+import Erdos306.Core
+import Erdos306.Counting
+import Erdos306.FormalConjectures
+import Erdos306.Main
+import Erdos306.Major
+import Erdos306.Minor
+import Erdos306.Primes
+import Erdos306.Reduction
+import Erdos306.Table
+import Mathlib

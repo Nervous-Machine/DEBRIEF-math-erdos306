@@ -1,0 +1,17 @@
+✔ [8219/8233] Built Erdos306.Basic (2.3s)
+✔ [8220/8233] Built Erdos306.Primes (7.5s)
+✔ [8221/8233] Built Erdos306.Construction (4.6s)
+✔ [8222/8233] Built Erdos306.Counting (3.2s)
+✔ [8223/8233] Built Erdos306.Reduction (3.5s)
+✔ [8224/8233] Built Erdos306.Table (3.2s)
+✔ [8225/8233] Built Erdos306.Asymptotics (7.1s)
+✔ [8226/8233] Built Erdos306.Major (4.4s)
+✔ [8227/8233] Built Erdos306.Columns (6.5s)
+✔ [8228/8233] Built Erdos306.Minor (3.6s)
+✔ [8229/8233] Built Erdos306.Core (2.9s)
+ℹ [8230/8233] Built Erdos306.Main (2.7s)
+info: Erdos306/Main.lean:22:0: 'Erdos306.erdos_306' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8231/8233] Built Erdos306.FormalConjectures (2.9s)
+info: Erdos306/FormalConjectures.lean:68:0: 'Erdos306.erdos_306_formal_conjectures' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8232/8233] Built Erdos306 (1.9s)
+Build completed successfully (8233 jobs).

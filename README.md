@@ -2,7 +2,7 @@
 
 A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) for **The claimed solution of Erdős Problem #306 (sums of unit fractions with semiprime denominators)**.
 
-**Standing.** Certified 0. Accepted 0. Refuted 0. Open gaps 3. This record is at tier zero: the claim and its public artifacts are pinned, the checks still owed are listed, and nothing has been run or read yet. The first contribution is open.
+**Standing.** Certified 2. Accepted 0. Refuted 0. Open gaps 2. The claim and its public artifacts are pinned. On 2026-11-14 Nervous Machine rerun the Lean build at the pinned commit inside a virtual machine, under a rule written down first (cycle 1, logs in `cycles/rerun-1/`): the build passed, the main theorem depends on the three standard axioms only, and the third-party formal statement of the problem, copied word for word from google-deepmind/formal-conjectures, is closed by the claimant's theorem in one step. Nobody has yet read that formal statement against the problem as posed, or the paper; those are the open gaps and the next contributions.
 
 ## The problem
 
@@ -31,7 +31,7 @@ Status on the problem page as of 2026-11-14: listed as one proof claim; not mark
 
 Each open gap is in `ASKS.md` with what closes it and who could act. In order:
 
-1. **The Lean development has not been built or kernel-checked by anyone outside the claimant** (EG1): A rerun of the Lean build on an independent machine, written down first.
+1. ~~The Lean development has not been built or kernel-checked by anyone outside the claimant~~ (EG1): resolved by cycle 1. A second rerun by anyone outside Nervous Machine would strengthen it and is welcome.
 2. **Do the formal statements say what the problem asks?** (EG2): A reading of the formal statement against the problem as posed, by someone who did not write it.
 3. **No independent mathematician has reported reading the proof, and there is no referee report** (EG3): Someone in the field reads it and says, under their name, what holds and what does not.
 
@@ -49,7 +49,7 @@ Rules and templates: https://github.com/Nervous-Machine/DEBRIEF/blob/main/CONTRI
 ledger/erdos306.json   the ledger (protocol 0.1.0)
 claim.yaml            the pinned claim this record was opened from
 SCORECARD.md / ASKS.md  generated from the ledger
-prereg_rerun.yaml     a pre-registration template for the first rerun (unregistered)
+prereg_rerun.yaml     the pre-registration of cycle 1 (hashed; copy it for your own rerun)
 cycles/               contributed cycles, one file each
 ```
 
