@@ -1,0 +1,40 @@
+# Cycle 2: a definitional trace (reading guide) of the formal statement, for human semantic review.
+# Pre-registered in prereg_trace.yaml (hashed 2026-11-14T23:13:05Z) before the Mathlib definitions were read.
+kind: trace
+cycle: 2
+dated: "2026-11-14"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+not_an_author_of_the_claim: true
+preregistered:
+  commit: "prereg_trace.yaml"
+  results: ["trace/DEFINITIONAL-TRACE.md", "cycles/trace-2/Trace.lean", "cycles/trace-2/trace.txt"]
+  question: "Can the open semantic gap (EG2) be made cheaper for a human reviewer: the problem as posed, the third-party formal statement, every definition behind it, a plain rendering, and the points to confirm?"
+  rule: "Statements quoted verbatim from the pinned files with file and line; renderings marked as the agent's; every discrepancy recorded whether harmless or not; worked examples checked by Lean, not asserted; standing unchanged by construction."
+  predictions:
+    - "P1: the formal statement renders to the page's sentence with no constant or quantifier mismatch"
+    - "P2: at least one boundary convention needs a sentence (k = 0, division by zero, Squarefree 1); none changes the meaning"
+    - "P3: the claimant's finite-set form is at least as strong as the formal-conjectures form, as cycle 1 showed"
+  before_data: true
+outcome:
+  verdict: confirmed
+  numbers:
+    statements_traced: 2
+    pieces_traced: 8
+    definitions_cited: 9
+    worked_examples_checked_by_lean: 8
+    discrepancies_recorded: 7
+    content_affecting_discrepancies_seen_by_agent: 0
+    anomalies_opened: 0
+    human_review: false
+    checklist_items: 6
+  misses: []
+spoken: >-
+  Nervous Machine wrote the reading guide for the one question on this record that a machine cannot settle: whether the
+  formal statement of problem 306 says what Erdős and Graham asked. The guide quotes the problem page and the third-party
+  formal statement word for word, traces every symbol in it to its definition in Mathlib or Lean's core with file and
+  line, gives a plain reading of each piece, and has Lean itself check eight small examples, such as which small numbers
+  count as a product of two distinct primes. Seven conventions are written down, including one where Lean's index
+  numerals wrap for the empty case; none changes the meaning in the agent's reading. The readings are the system's, not
+  a mathematician's, so nothing changed standing. A number theorist can now sign or refuse four lines in under an hour.
+finding_ids: []
+gap_ids: ["EG2"]
