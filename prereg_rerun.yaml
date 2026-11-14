@@ -1,23 +1,26 @@
-# Pre-registration for the first rerun of this claim's Lean development. Fill in, then register BEFORE running:
-#   python3 <DEBRIEF>/tools/prereg.py register prereg_rerun.yaml   (writes prereg_rerun.yaml.sha256; commit both)
+# Pre-registration for the first rerun of this claim's Lean development. Registered BEFORE any fetch of the claimant's
+# repository (only its file listing was consulted, for layout: the lake package lives in lean/). The sidecar
+# prereg_rerun.yaml.sha256 carries the hash and the UTC time of registration.
 mission: DEBRIEF-math-erdos306
-by: "<your name as you want it recorded>"
-dated: "<YYYY-MM-DD>"
-question: "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry or admit, and which axioms does the main theorem use?"
-rule: "All checks below pass as predicted; any miss is recorded under misses."
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+dated: "2026-11-14"
+question: "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry reaching the main theorem, which axioms does the main theorem use, and does it prove the third-party formal statement of the problem?"
+rule: "All checks below pass as predicted; any miss is recorded under misses. The build runs only inside an isolated virtual machine; nothing from the repository is executed on the host. The repository has no licence file, so nothing from it is copied into this record beyond short quotations of statements."
+environment_planned: "Lima VM `primegaps` on an Apple-silicon host: aarch64 Ubuntu, 20 cores, 98 GB memory; elan-managed Lean toolchain as pinned by lean/lean-toolchain."
 checks:
   - id: R1
-    what: "fetch github.com/daizisheng/erdos-306 at 1314c9a8bcedaaf986f61fb6cd7129a834116abb; confirm the tree matches"
-    prediction: "commit present; tree unchanged"
+    what: "git clone github.com/daizisheng/erdos-306 and check out 1314c9a8bcedaaf986f61fb6cd7129a834116abb; confirm HEAD is that commit and the working tree is clean"
+    prediction: "commit present; HEAD matches; tree clean"
   - id: R2
-    what: "lake exe cache get (if Mathlib) and lake build; record wall time and peak memory"
-    prediction: "exit 0, 0 errors; <your predicted time and memory>"
+    what: "in lean/: lake exe cache get (if Mathlib is a dependency), then lake build under /usr/bin/time -v; record wall time and peak memory"
+    prediction: "exit 0 with no errors; wall time under thirty minutes on 20 cores (14 Lean files, Mathlib from the community cache); peak memory under 16 GB"
   - id: R3
-    what: "grep for sorry, admit, native_decide and custom axioms across the development"
-    prediction: "none"
+    what: "scan every .lean file in lean/ (excluding .lake) for sorry, admit, native_decide, axiom declarations, implemented_by and extern; list each hit by file and line"
+    prediction: "no hit in any file of the default build target's import closure; a hit in a file outside that closure is listed but is not a miss"
   - id: R4
-    what: "#print axioms on the main theorem"
+    what: "#print axioms, from our own scratch file via lake env lean, on the theorem the repository's README names as the main result; record its full statement verbatim for the reading guide"
     prediction: "propext, Classical.choice, Quot.sound only"
   - id: R5
-    what: "compare the main theorem statement with FormalConjectures/ErdosProblems/306.lean at e028240a61822d970c933f4656f51da025cf200b; state identical, equivalent (with proof), or different"
-    prediction: "<your prediction>"
+    what: "machine comparison with the third-party statement: take `Erdos306.erdos_306` from google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/306.lean at commit e028240a (blob f7940968…, file sha256 7a5d90ac5eef16085ff86291dd44002583ec7ddfabf1631cc0e76d4bf3479a89), restate it verbatim in our own scratch file against the claimant's development, and try to close it with the claimant's theorem by `exact`; print its axioms"
+    prediction: "the repository contains a theorem stating the formal-conjectures proposition; the verbatim third-party statement is closed by `exact` with that theorem (so the two are identical up to definitional unfolding) and depends on the three standard axioms only"
+logs: "cycles/rerun-1/ (build.log, time.txt, scan.txt, axioms.txt, compare.txt, manifest.json with the toolchain and dependency commits)"
