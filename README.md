@@ -2,6 +2,8 @@
 
 A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) for **The claimed solution of Erdős Problem #306 (sums of unit fractions with semiprime denominators)**.
 
+This claim is on the public claims board, https://math-board.nervousmachine.com, which shows its stage, who has contributed, and what it needs next.
+
 **Standing.** Certified 2. Accepted 0. Refuted 0. Open gaps 2. The claim and its public artifacts are pinned. On 2026-11-14 Nervous Machine rerun the Lean build at the pinned commit inside a virtual machine, under a rule written down first (cycle 1, logs in `cycles/rerun-1/`): the build passed, the main theorem depends on the three standard axioms only, and the third-party formal statement of the problem, copied word for word from google-deepmind/formal-conjectures, is closed by the claimant's theorem in one step. Nobody has yet read that formal statement against the problem as posed, or the paper; those are the open gaps and the next contributions.
 
 ## The problem
