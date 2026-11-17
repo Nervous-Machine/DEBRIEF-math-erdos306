@@ -331,6 +331,47 @@
    "spoken": "What other registries showed on 2026-11-17. Palomar: no entry found. DeepMind formal-conjectures: main statement marked solved, linking a formal proof. erdosproblems.com: status open. None of these is a named human reading of the statement.",
    "finding_ids": [],
    "gap_ids": []
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos306-2026-11",
+   "pod": "DEBRIEF-math-erdos306",
+   "audience": "briefing",
+   "created_by": "recorded by the maintainer from the party's public work",
+   "created_at": "2026-11-17T22:00:00Z",
+   "provenance": {
+    "source": "github.com/linrock/math-proofs erdos-306/ at e1a5e2a3317007f0e31b98bf2e80383187b31238 (README, BUILD.md, AxiomAudit.lean, Statement.lean); recorded from public data, not submitted to this repository"
+   },
+   "kind": "rerun",
+   "cycle": "xu-port-2026-10-13",
+   "dated": "2026-10-13",
+   "by": "Linmiao Xu",
+   "preregistered": {
+    "question": "Does the claimant's development, ported to a newer Lean, still prove the formal-conjectures statement with standard axioms only?",
+    "rule": "as reported in the port's README: Statement.lean checks the exported statements against formal-conjectures; AxiomAudit.lean prints the axioms of every endpoint",
+    "predictions": [],
+    "commit": null,
+    "before_data": false,
+    "results": [
+     "https://github.com/linrock/math-proofs/tree/e1a5e2a3317007f0e31b98bf2e80383187b31238/erdos-306"
+    ]
+   },
+   "outcome": {
+    "verdict": "confirmed",
+    "numbers": {
+     "lean": "4.35.0-rc2",
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "reported_by_party": true,
+     "rebuilt_here": false
+    }
+   },
+   "spoken": "Linmiao Xu ported the claimant's Lean development to Lean 4.35.0-rc2 and reports that it proves the formal-conjectures statement using the three standard axioms only. The port claims no novelty. Nervous Machine has not rebuilt the port; this records Xu's reported check, which DeepMind's formal-conjectures links as the formal proof.",
+   "finding_ids": [],
+   "gap_ids": []
   }
  ],
  "findings": [
