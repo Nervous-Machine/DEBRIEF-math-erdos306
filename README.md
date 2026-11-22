@@ -4,7 +4,22 @@ A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) f
 
 This claim is on the public claims board, https://math-board.nervousmachine.com, which shows its stage, who has contributed, and what it needs next.
 
-**Standing.** Certified 2. Accepted 0. Refuted 0. Open gaps 2. The claim and its public artifacts are pinned. On 2026-11-14 Nervous Machine rerun the Lean build at the pinned commit inside a virtual machine, under a rule written down first (cycle 1, logs in `cycles/rerun-1/`): the build passed, the main theorem depends on the three standard axioms only, and the third-party formal statement of the problem, copied word for word from google-deepmind/formal-conjectures, is closed by the claimant's theorem in one step. Nobody has yet read that formal statement against the problem as posed, or the paper; those are the open gaps and the next contributions.
+<!-- standing:begin -->
+**Standing, 17 Nov 2026.** Stage: Reading guide written. Needs next: Do the formal statements say what the problem asks? ([what would close it](ASKS.md)).
+
+| certified | accepted | refuted | open gaps | cycles filed | last cycle |
+|---|---|---|---|---|---|
+| 2 | 0 | 0 | 2 | 3 | 17 Nov 2026 |
+
+| | |
+|---|---|
+| checked by machine | Linmiao Xu, Nervous Machine |
+| read by a person | nobody yet; [reading guide](trace/DEFINITIONAL-TRACE.md) |
+| elsewhere | [DeepMind formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/6751c0f043985ac6647db28a45a63afdf21acffe/FormalConjectures/ErdosProblems/306.lean): solved, proof linked · [erdosproblems.com](https://www.erdosproblems.com/): open |
+| related | — |
+
+Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: 2 certified.
+<!-- standing:end -->
 
 ## The problem
 
