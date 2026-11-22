@@ -105,6 +105,57 @@
      "kind": "formalisation (third party, port)",
      "ref": "github.com/linrock/math-proofs erdos-306/ at e1a5e2a3317007f0e31b98bf2e80383187b31238, Linmiao Xu: a port of the claimant's Lean development to Lean 4.35.0-rc2, linked as the formal proof from formal-conjectures' 306.lean"
     }
+   ],
+   "tooling": [
+    {
+     "by": "Shisheng Li",
+     "tier": "unknown",
+     "basis": "stated by the claimant: three models named, no tier; all three were public by the date submitted",
+     "models": [
+      {
+       "model": "GPT-5.6 Sol",
+       "id": "gpt-5-6-sol",
+       "vendor": "OpenAI",
+       "public_release": "2026-07-09",
+       "tiers_at_release": [
+        "subscription",
+        "subscription-pro",
+        "api"
+       ],
+       "public_at_the_time": "yes"
+      },
+      {
+       "model": "GPT-6 Astra",
+       "id": "gpt-6-astra",
+       "vendor": "OpenAI",
+       "public_release": "2026-09-03",
+       "tiers_at_release": [
+        "subscription",
+        "subscription-pro",
+        "api"
+       ],
+       "public_at_the_time": "yes"
+      },
+      {
+       "model": "Claude Opus 5.5",
+       "id": "claude-opus-5-5",
+       "vendor": "Anthropic",
+       "public_release": "2026-09-22",
+       "tiers_at_release": [
+        "api",
+        "subscription",
+        "subscription-pro"
+       ],
+       "public_at_the_time": "yes",
+       "note": "public 7 days before the date submitted; the work's start is not stated"
+      }
+     ],
+     "work": {
+      "to": "2026-09-29"
+     },
+     "duration": "not stated",
+     "compute": "not stated"
+    }
    ]
   }
  ],

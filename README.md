@@ -17,6 +17,7 @@ This claim is on the public claims board, https://math-board.nervousmachine.com,
 | read by a person | nobody yet; [reading guide](trace/DEFINITIONAL-TRACE.md) |
 | elsewhere | [DeepMind formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/6751c0f043985ac6647db28a45a63afdf21acffe/FormalConjectures/ErdosProblems/306.lean): solved, proof linked · [erdosproblems.com](https://www.erdosproblems.com/): open |
 | related | — |
+| tooling | GPT-5.6 Sol, GPT-6 Astra, Claude Opus 5.5 · tier: unknown (stated by the claimant: three models named, no tier; all three were public by the date submitted) |
 
 Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: 2 certified.
 <!-- standing:end -->
